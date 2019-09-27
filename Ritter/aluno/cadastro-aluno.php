@@ -108,25 +108,28 @@ include_once '../util/helper.class.php';
               <?php
 
               if(isset($_POST['cadastrar'])){
+                
                 include '../modelo/aluno.class.php';
                 include '../dao/alunodao.class.php';
                 $aluno = new AlunoDAO();
                 $aluno->nome = $_POST['txtnome'];
                 $aluno->curso = $_POST['txtcurso'];
                 $aluno->campus = $_POST['txtcampus'];
-                $aluno->periodo = $_POST['txtperiodo'];
-                $aluno->nomeresponsavel = $_POST['txtnomeresponsavel'];
-                $aluno->cpfresponsavel = $_POST['cpfresponsavel'];
-                $aluno->cpfaluno = $_POST['cpfaluno'];
+                $aluno->turno = $_POST['txtturno'];
+                $aluno->nomeResponsavel = $_POST['txtnomeresponsavel'];
+                $aluno->cpfResponsavel = $_POST['cpfresponsavel'];
+                $aluno->cpfAluno = $_POST['cpfaluno'];
                 $aluno->semestre = $_POST['semestre'];
-                $aluno->status = $_POST['status'];
+                $aluno->status = $_POST['txtStatus'];
+                
 
 
                 $alunoDAO = new AlunoDAO();
                 $alunoDAO->cadastrarAluno($aluno);
 
                 Helper::alert("Foi cadastrado com sucesso!");
-                echo $aluno;
+                
+                ob_end_flush();
               }
             ?>
 
