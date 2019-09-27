@@ -43,31 +43,31 @@ require '../persistencia/conexaobanco.class.php';
  	}//fecha buscarUsuarios
 
    public function alterarAluno($aluno){
-     try{
-       $stat = $this->conexao->prepare("update aluno set nome=?, curso=?, campus=?, periodo=?, nome_responsavel=?, cpf_responsavel=?, cpf_aluno=?, semestre=?, status=? where matricula=?");
-       $stat->bindValue(1, $aluno->nome);
-       $stat->bindValue(2, $aluno->curso);
-       $stat->bindValue(3, $aluno->campus);
-       $stat->bindValue(4, $aluno->periodo);
-       $stat->bindValue(5, $aluno->nomeResponsavel);
-       $stat->bindValue(7, $aluno->cpfResponsavel);
-       $stat->bindValue(8, $aluno->cpfAluno);
-       $stat->bindValue(9, $aluno->semestre);
-       $stat->bindValue(10, $aluno->status);
-       $stat->execute();
+    //  try{
+    //    $stat = $this->conexao->prepare("update aluno set nome=?, curso=?, campus=?, periodo=?, nome_responsavel=?, cpf_responsavel=?, cpf_aluno=?, semestre=?, status=? where matricula=?");
+    //    $stat->bindValue(1, $aluno->nome);
+    //    $stat->bindValue(2, $aluno->curso);
+    //    $stat->bindValue(3, $aluno->campus);
+    //    $stat->bindValue(4, $aluno->periodo);
+    //    $stat->bindValue(5, $aluno->nomeResponsavel);
+    //    $stat->bindValue(7, $aluno->cpfResponsavel);
+    //    $stat->bindValue(8, $aluno->cpfAluno);
+    //    $stat->bindValue(9, $aluno->semestre);
+    //    $stat->bindValue(10, $aluno->status);
+    //    $stat->execute();
 
-     }catch(PDOException $e){
-       echo "Erro ao alterar Aluno! ".$e;
-     }
+    //  }catch(PDOException $e){
+    //    echo "Erro ao alterar Aluno! ".$e;
+    //  }
    }
 
    public function deletarAluno($matricula){
-     try{
-       $stat = $this->conexao->prepare("delete from aluno where matricula = ?");
-       $stat->bindValue(1, $matricula);
-       $stat->execute();
-     }catch(PDOException $e){
-       echo "Erro ao excluir o Aluno! ".$e;
-     }
+    //  try{
+    //    $stat = $this->conexao->prepare("delete from aluno where matricula = ?");
+    //    $stat->bindValue(1, $matricula);
+    //    $stat->execute();
+    //  }catch(PDOException $e){
+    //    echo "Erro ao excluir o Aluno! ".$e;
+    //  }
    }
  }

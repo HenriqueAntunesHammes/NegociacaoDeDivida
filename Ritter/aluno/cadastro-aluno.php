@@ -99,12 +99,17 @@ include_once '../util/helper.class.php';
               <div class="row">
                 <div class="form-group col-md-12">
                   <label>STATUS</label>
-                  <select name="txtStatus" class="form-control">
+                  <select name="txtstatus" class="form-control">
                     <option value="aberto"> EM ABERTO </option>
                   </select>
                 </div>
               </div>
 
+             
+              <div class="form-group">
+                <input type="submit" name="cadastrar" value="Cadastrar" class="btn btn-danger">
+                <input type="reset" name="Limpar" value="Limpar" class="btn btn-dark">
+              </div>
               <?php
 
               if(isset($_POST['cadastrar'])){
@@ -120,23 +125,22 @@ include_once '../util/helper.class.php';
                 $aluno->cpfResponsavel = $_POST['cpfresponsavel'];
                 $aluno->cpfAluno = $_POST['cpfaluno'];
                 $aluno->semestre = $_POST['semestre'];
-                $aluno->status = $_POST['txtStatus'];
+                $aluno->status = $_POST['txtstatus'];
                 
 
 
                 $alunoDAO = new AlunoDAO();
-                $alunoDAO->cadastrarAluno($aluno);
+                $alunoDAO->cadastrarAluno($alunoDAO);
 
-                Helper::alert("Foi cadastrado com sucesso!");
-                
+                $_SESSION['msg'] = "Aluno cadastrado com sucesso!";
+                header("location:cadastro-aluno.php");
+
                 ob_end_flush();
+                
+                
               }
-            ?>
+              ?>
 
-              <div class="form-group">
-                <input type="submit" name="cadastrar" value="Cadastrar" class="btn btn-danger">
-                <input type="reset" name="Limpar" value="Limpar" class="btn btn-dark">
-              </div>
             </form>
             </div>
         </div>
