@@ -1,11 +1,11 @@
-<!-- <?php
+<?php
 session_start();
 ob_start();
 include_once '../dao/mensalidade.class.php';
 include_once '../util/helper.class.php';
 $mensalidadeDAO = new MensalidadeDAO();
 $array = $mensalidadeDAO->buscarMensalidade();
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,10 +30,10 @@ $array = $mensalidadeDAO->buscarMensalidade();
       unset($_SESSION['msg']);
     }
 
-    if(count($array) == 0){
+    // if(count($array) == 0){
         echo "<h2>Não há Mensalidades EM ABERTO!</h2>";
-        return;
-    }
+        // return;
+    // }
     ?>
     <form name="filtrar" method="post" action="">
       <div class="row">
@@ -58,22 +58,19 @@ $array = $mensalidadeDAO->buscarMensalidade();
       </div>
     </form>
 
-    <?php
-//     if(isset($_POST['filtrar'])){
-//       $pesquisa = $_POST['txtfiltro'];
-//       $filtro = $_POST['selfiltro'];
-//       if(!empty($pesquisa)){
-//         $mensalidadeDAO = new ClienteDAO();
-//         $array = $mensalidadeDAO->filtrar($pesquisa,$filtro);
-//   }
-// }
-      //   if(count($array) == 0){
-      //   }
-      // }else{
+    <!-- <?php
+    if(isset($_POST['filtrar'])){
+      $pesquisa = $_POST['txtfiltro'];
+      $filtro = $_POST['selfiltro'];
+      if(!empty($pesquisa)){
+        $mensalidadeDAO = new ClienteDAO();
+        $array = $mensalidadeDAO->filtrar($pesquisa,$filtro);
+      }      if(count($array) == 0){
+      }
+      }else{
         echo "<h3>Sua pesquisa não retornou nenhumma Mensalidade!</h3>";
-      // }
-
-    ?>
+      }
+    ?> -->
 
     <div class="table-responsive">
       <table class="table table-striped table-bordered table-hover table-condensed">
@@ -90,7 +87,7 @@ $array = $mensalidadeDAO->buscarMensalidade();
             <th>Alterar</th>
           </tr>
         </thead>
-        <tfoot>
+        <!-- <tfoot>
           <tr>
             <th>Matrícula</th>
             <th>Nome</th>
@@ -102,7 +99,7 @@ $array = $mensalidadeDAO->buscarMensalidade();
             <th>Excluir</th>
             <th>Alterar</th>
           </tr>
-        </tfoot>
+        </tfoot> -->
         <tbody>
           <!-- <?php
           foreach($array as $l){
