@@ -197,55 +197,21 @@ body {
     <h2 class="cover-heading"> INTERFACE DE SIMULAÇÃO PARA NEGOCIAÇÃO DE DÍVIDA</h2>
     <p class="lead">Molde 01 do projeto de desenvolvimento de interface <br><br></p>
 
-
     <div class="row col-md-12">
-    <div class="col-md-4">
-        <button type="button" class="btn btn-warning btn-circle btn-xl" data-toggle="modal" data-target="#myModal">
-            <img src="../images/icon-rematricula.png" alt="icon exemple" width="50px" height="50px">
-        </button>
-        <br>
-        <a href="aluno/cadastro-aluno.php" style="color:gold;font-size:22px;"> Cadastrar Aluno </a>
-        </div>
-     <div class="col-md-4">
-        <button type="button" class="btn btn-warning btn-circle btn-xl" data-toggle="modal" data-target="#myModal">
-            <img src="../images/icon-rematricula.png" alt="icon exemple" width="50px" height="50px">
-        </button>
-        <br>
-        <a href="aluno/consulta-aluno.php" style="color:gold;font-size:22px;"> Consultar Aluno </a>
-        </div>
-     <div class="col-md-4">
-        <button type="button" class="btn btn-warning btn-circle btn-xl" data-toggle="modal" data-target="#myModal">
-            <img src="../images/icon-divida.png" alt="icon exemple" width="60px" height="60px">
-        </button>
-        <br>
-        <a href="rematricula.php" style="color:gold;font-size:22px;"> Rematrícula Perfeita</a>
+       <div class="col-md-6">
+         <button type="button" class="btn btn-warning btn-circle btn-xl" data-toggle="modal" data-target="#myModal">
+           <img src="../images/icon-rematricula.png" alt="icon exemple" width="50px" height="50px">
+         </button>
+         <br>
+         <a href="aluno/consulta-aluno.php" style="color:gold;font-size:22px;"> Consultar Aluno </a>
        </div>
-     </div>
-
-   <!--     AQUI INICIA SEGUNDA LINHA DE BOTOES  -->
-
-    <div class="row col-md-12">
-        <div class="col-md-4">
-            <button type="button" class="btn btn-warning btn-circle btn-xl" data-toggle="modal" data-target="#myModal">
-                <img src="../images/icon-rematricula.png" alt="icon exemple" width="50px" height="50px">
-            </button>
-            <br>
-            <a href="aluno/cadastro-mensalidades.php" style="color:gold;font-size:22px;"> Cadastrar Mensalidades </a>
-        </div>
-         <div class="col-md-4">
-            <button type="button" class="btn btn-warning btn-circle btn-xl" data-toggle="modal" data-target="#myModal">
-                <img src="../images/icon-rematricula.png" alt="icon exemple" width="50px" height="50px">
-            </button>
-            <br>
-            <a href="aluno/consulta-mensalidades.php" style="color:gold;font-size:22px;"> Consultar Mensalidades </a>
-         </div>
-         <div class="col-md-4">
-            <button type="button" class="btn btn-warning btn-circle btn-xl" data-toggle="modal" data-target="#myModal">
-                <img src="../images/icon-divida.png" alt="icon exemple" width="60px" height="60px">
-            </button>
-            <br>
-            <a href="rematricula-com-divida.php" style="color:gold;font-size:22px;"> Rematrícula com Dívida</a>
-         </div>
+       <div class="col-md-6">
+         <button type="button" class="btn btn-warning btn-circle btn-xl" data-toggle="modal" data-target="#myModal">
+             <img src="../images/icon-rematricula.png" alt="icon exemple" width="50px" height="50px">
+         </button>
+         <br>
+         <a href="aluno/consulta-mensalidades.php" style="color:gold;font-size:22px;"> Check-In </a>
+       </div>
      </div>
   </main>
 </div>

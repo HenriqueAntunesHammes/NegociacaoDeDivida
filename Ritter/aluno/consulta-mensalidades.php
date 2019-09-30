@@ -1,11 +1,11 @@
-<?php
+<!-- <?php
 session_start();
 ob_start();
 include_once '../dao/mensalidade.class.php';
 include_once '../util/helper.class.php';
 $mensalidadeDAO = new MensalidadeDAO();
 $array = $mensalidadeDAO->buscarMensalidade();
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -59,18 +59,20 @@ $array = $mensalidadeDAO->buscarMensalidade();
     </form>
 
     <?php
-    if(isset($_POST['filtrar'])){
-      $pesquisa = $_POST['txtfiltro'];
-      $filtro = $_POST['selfiltro'];
-      if(!empty($pesquisa)){
-        $mensalidadeDAO = new ClienteDAO();
-        $array = $mensalidadeDAO->filtrar($pesquisa,$filtro);
-        if(count($array) == 0){
-        }
-      }else{
+//     if(isset($_POST['filtrar'])){
+//       $pesquisa = $_POST['txtfiltro'];
+//       $filtro = $_POST['selfiltro'];
+//       if(!empty($pesquisa)){
+//         $mensalidadeDAO = new ClienteDAO();
+//         $array = $mensalidadeDAO->filtrar($pesquisa,$filtro);
+//   }
+// }
+      //   if(count($array) == 0){
+      //   }
+      // }else{
         echo "<h3>Sua pesquisa não retornou nenhumma Mensalidade!</h3>";
-      }
-    }
+      // }
+
     ?>
 
     <div class="table-responsive">
@@ -102,7 +104,7 @@ $array = $mensalidadeDAO->buscarMensalidade();
           </tr>
         </tfoot>
         <tbody>
-          <?php
+          <!-- <?php
           foreach($array as $l){
             echo "<tr>";
               echo "<td>$l->matricula</td>";
@@ -117,17 +119,17 @@ $array = $mensalidadeDAO->buscarMensalidade();
               echo "<td><a href='alterar-aluno.php?id=$l->idAluno' class='btn btn-dark'> Alterar </a></td>";
               echo "</tr>";
           }
-          ?>
+          ?> -->
         </tbody>
       </table>
     </div>
   </div>
-  <?php
+  <!-- <?php
   if(isset($_GET['id'])){
     $mensalidadeDAO->deletarAluno($_GET['id']);
     $_SESSION['msg'] = "Aluno excluído com sucesso!";
       header("location:consulta-mensalidades.php");
   }
-  ?>
+  ?> -->
 </body>
 </html>
