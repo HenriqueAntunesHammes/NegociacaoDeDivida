@@ -30,10 +30,10 @@ $array = $alunoDAO->buscarAluno();
       unset($_SESSION['msg']);
     }
 
-    if(count($array) == 0){
+    // if(count($array) == 0){
         echo "<h2>Não há aluno no banco!</h2>";
-        return;
-    }
+    //     return;
+    // }
     ?>
     <form name="filtrar" method="post" action="">
       <div class="row">
@@ -91,7 +91,7 @@ $array = $alunoDAO->buscarAluno();
             <th>Status</th>
           </tr>
         </thead>
-        <tfoot>
+        <!-- <tfoot>
           <tr>
             <th>Matrícula</th>
             <th>Nome do Aluno</th>
@@ -104,9 +104,9 @@ $array = $alunoDAO->buscarAluno();
             <th>Semestre</th>
             <th>Status</th>
           </tr>
-        </tfoot>
+        </tfoot> -->
         <tbody>
-          <?php
+          <!-- <?php
           foreach($array as $l){
             echo "<tr>";
               echo "<td>$l->matricula</td>";
@@ -123,7 +123,7 @@ $array = $alunoDAO->buscarAluno();
               echo "<td><a href='alterar-aluno.php?id=$l->idAluno' class='btn btn-dark'>Alterar</a></td>";
             echo "</tr>";
           }
-          ?>
+          ?> -->
         </tbody>
       </table>
     </div>
